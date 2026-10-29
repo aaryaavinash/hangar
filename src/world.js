@@ -2,7 +2,7 @@
 // an overhead crane, maintenance gantries, containers, floods, bay lamps, red strobes and the dawn door.
 import * as THREE from 'three';
 import { mergeGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils.js';
-import { bakeTexture, fbmNormal } from '../../src/core/textures.js';
+import { bakeTexture, fbmNormal } from './core/textures.js';
 
 export const HALL = { x: 31, zBack: -32, zFront: 36, h: 28, doorW: 15, doorH: 20 };
 export const BAYS_Z = [-28, -20, -12, -4, 4, 12, 20, 28];
@@ -530,7 +530,7 @@ export function buildHangar({ scene, renderer, reflection, maxAniso = 8 }) {
   out.doors = doors;
 
   // Outside: dawn plate beyond the apron
-  const dawnTex = new THREE.TextureLoader().load(`${import.meta.env.BASE_URL}img/hangar/dawn.webp`);
+  const dawnTex = new THREE.TextureLoader().load(`${import.meta.env.BASE_URL}img/dawn.webp`);
   dawnTex.colorSpace = THREE.SRGBColorSpace;
   const dawnMat = new THREE.MeshBasicMaterial({ map: dawnTex, fog: false, color: new THREE.Color(0, 0, 0) });
   const plateW = 190, plateH = plateW * 1536 / 2752;

@@ -1,13 +1,12 @@
 import './tailwind.css';
-import { Engine, THREE, normalize, prepModel, damp, clamp, smooth, lerp, studioEnvironment } from '../../src/core/engine.js';
-import { Assets, firstMesh } from '../../src/core/assets.js';
-import { Pointer } from '../../src/core/input.js';
-import { smoothScroll, gsap } from '../../src/core/scroll.js';
-// ORIGINAL (preserved, not deleted — disabled by comment): import { preloader, cursor, magnetic, worldNav } from '../../src/core/ui.js';
-import { preloader, cursor, magnetic } from '../../src/core/ui.js';
-import { PlanarReflection } from '../../src/core/reflector.js';
+import { Engine, THREE, normalize, prepModel, damp, clamp, smooth, lerp, studioEnvironment } from './core/engine.js';
+import { Assets, firstMesh } from './core/assets.js';
+import { Pointer } from './core/input.js';
+import { smoothScroll, gsap } from './core/scroll.js';
+import { preloader, cursor, magnetic } from './core/ui.js';
+import { PlanarReflection } from './core/reflector.js';
 import { Effect, EffectPass } from 'postprocessing';
-import { fbmTexture } from '../../src/core/textures.js';
+import { fbmTexture } from './core/textures.js';
 import { HangarVolumetric } from './volumetric.js';
 import { buildHangar, BAYS_Z } from './world.js';
 import { mechUniforms, patchMech, scanSheet, Steam, Sparks, BeamDust } from './fx.js';
@@ -111,8 +110,8 @@ const loader = preloader({
 // ─── World ────────────────────────────────────────────────────────────────────
 const reflection = new PlanarReflection(renderer, { resolution: 0.5 });
 engine.onResize((w, h, dpr) => reflection.setSize(w, h, dpr));
-const mechP = assets.gltf('models/hangar/mech.glb');
-const droneP = assets.gltf('models/hangar/drone.glb');
+const mechP = assets.gltf('models/mech.glb');
+const droneP = assets.gltf('models/drone.glb');
 await Promise.race([
   Promise.all(['700 100px "Chakra Petch"', '600 100px "Chakra Petch"'].map(f => document.fonts.load(f))),
   new Promise(r => setTimeout(r, 2500)),
@@ -860,7 +859,6 @@ engine.onTick((dt, t) => {
 addEventListener('pointerover', e => { pointer.overUI = !!e.target.closest?.('a, button:not(.gauge), .nav, .card, .quote, .tw-nav'); });
 
 // ─── Boot ─────────────────────────────────────────────────────────────────────
-// ORIGINAL (preserved, not deleted — disabled by comment): worldNav('hangar', { theme: 'dark', corner: 'bl' });
 const cur = cursor({ color: '#ffb000', blend: 'normal', size: 30 });
 magnetic();
 const lenis = smoothScroll({ lerp: 0.08 });

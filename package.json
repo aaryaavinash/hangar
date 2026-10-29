@@ -1,7 +1,7 @@
 {
   "name": "hangar",
   "private": true,
-  "description": "Standalone Hangar Nine world from Dioramas.",
+  "description": "A fictional test-pilot recruitment site for the HN-9 Warden.",
   "license": "MIT",
   "version": "0.1.0",
   "type": "module",

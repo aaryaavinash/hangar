@@ -1,0 +1,21 @@
+// ORIGINAL (preserved, not deleted — disabled by comment): previous nested paths
+// import { Engine, THREE, normalize, prepModel, damp, clamp, smooth, lerp, studioEnvironment } from '../../src/core/engine.js';
+// import { Assets, firstMesh } from '../../src/core/assets.js';
+// import { Pointer } from '../../src/core/input.js';
+// import { smoothScroll, gsap } from '../../src/core/scroll.js';
+// // ORIGINAL (preserved, not deleted — disabled by comment): import { preloader, cursor, magnetic, worldNav } from '../../src/core/ui.js';
+// import { preloader, cursor, magnetic } from '../../src/core/ui.js';
+// import { PlanarReflection } from '../../src/core/reflector.js';
+// import { fbmTexture } from '../../src/core/textures.js';
+// const mechP = assets.gltf('models/hangar/mech.glb');
+// const droneP = assets.gltf('models/hangar/drone.glb');
+// // ORIGINAL (preserved, not deleted — disabled by comment): worldNav('hangar', { theme: 'dark', corner: 'bl' });
+//           <img src="/img/hangar/pilot.webp" alt="Captain Ines Varga in a grey flight suit, helmet under her arm, in the hangar" width="960" height="1285" loading="lazy">
+// import { bakeTexture, fbmNormal } from '../../src/core/textures.js';
+//   const dawnTex = new THREE.TextureLoader().load(`${import.meta.env.BASE_URL}img/hangar/dawn.webp`);
+//   <link rel="stylesheet" href="./examples/hangar/style.css">
+//   <script type="module" src="./examples/hangar/main.js"></script>
+// // ORIGINAL (preserved, not deleted — disabled by comment): import { preloader, cursor, magnetic, worldNav } from './core/ui.js';
+// // ORIGINAL (preserved, not deleted — disabled by comment): worldNav('hangar', { theme: 'dark', corner: 'bl' });
+// ORIGINAL (preserved, not deleted — disabled by comment): old root HTML image paths
+//           <img src="/img/hangar/pilot.webp" alt="Captain Ines Varga in a grey flight suit, helmet under her arm, in the hangar" width="960" height="1285" loading="lazy">

@@ -1,8 +1,8 @@
-# 08 · Hangar Nine — "Power up a forty-ton machine"
+# Hangar Nine — "Power up a forty-ton machine"
 Brand: **Hangar Nine** — a (fictional) mech manufacturer's recruitment site for its test-pilot program.
 
 ## Signature interaction
-**Press and hold to power up.** The hangar starts almost black (the mech `models/hangar/mech.glb` barely visible, rim-lit by
+**Press and hold to power up.** The hangar starts almost black (the mech `models/mech.glb` barely visible, rim-lit by
 emergency red strobes). Holding mouse/space fills a radial "INITIATE" gauge; on completion: overhead floodlights clank on bay
 by bay (VolumetricSpotEffect beams, dust in the beams), the cockpit visor glows, steam bursts from vents, a HUD overlay boots
 (scan line sweep, reticles, readouts), and a **scan plane** travels up the mech revealing a glowing hologram/wire overlay on the
