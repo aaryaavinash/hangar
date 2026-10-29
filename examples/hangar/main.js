@@ -1,8 +1,10 @@
+import './tailwind.css';
 import { Engine, THREE, normalize, prepModel, damp, clamp, smooth, lerp, studioEnvironment } from '../../src/core/engine.js';
 import { Assets, firstMesh } from '../../src/core/assets.js';
 import { Pointer } from '../../src/core/input.js';
 import { smoothScroll, gsap } from '../../src/core/scroll.js';
-import { preloader, cursor, magnetic, worldNav } from '../../src/core/ui.js';
+// ORIGINAL (preserved, not deleted — disabled by comment): import { preloader, cursor, magnetic, worldNav } from '../../src/core/ui.js';
+import { preloader, cursor, magnetic } from '../../src/core/ui.js';
 import { PlanarReflection } from '../../src/core/reflector.js';
 import { Effect, EffectPass } from 'postprocessing';
 import { fbmTexture } from '../../src/core/textures.js';
@@ -858,7 +860,7 @@ engine.onTick((dt, t) => {
 addEventListener('pointerover', e => { pointer.overUI = !!e.target.closest?.('a, button:not(.gauge), .nav, .card, .quote, .tw-nav'); });
 
 // ─── Boot ─────────────────────────────────────────────────────────────────────
-worldNav('hangar', { theme: 'dark', corner: 'bl' });
+// ORIGINAL (preserved, not deleted — disabled by comment): worldNav('hangar', { theme: 'dark', corner: 'bl' });
 const cur = cursor({ color: '#ffb000', blend: 'normal', size: 30 });
 magnetic();
 const lenis = smoothScroll({ lerp: 0.08 });
